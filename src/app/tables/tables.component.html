@@ -1,5 +1,5 @@
-<!--<div class="mat-elevation-z8">
-  <mat-table [datasource]=transactions>
+<div class="mat-elevation-z8">
+  <mat-table [dataSource]=transactions>
     <ng-container matColumnDef="transactionRef">
       <mat-header-cell *matHeaderCellDef>Transaction Reference</mat-header-cell>
       <mat-cell *matCellDef= "let element">{{element.transactionRef}}</mat-cell>
@@ -50,4 +50,4 @@
     <mat-header-row *matHeaderRowDef="displayedColums"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
-</div>-->
+</div>

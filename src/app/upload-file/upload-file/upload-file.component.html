@@ -1,4 +1,4 @@
-<div class ="container">
+<div class ="container" *ngIf="!showTable">
     <div class="row">
         <div class = "col sb offset-2">
             <div class = "card-panel green accent-4">
@@ -14,3 +14,8 @@
     </div>
     </div>
 </div>
+
+<p-table>
+    <tr><th>Hi</th></tr>
+    <tr><td>HI</td></tr>
+</p-table>

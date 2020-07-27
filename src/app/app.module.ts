@@ -46,6 +46,7 @@ import { UploadFileComponent } from './upload-file/upload-file/upload-file.compo
 import { UploadService } from 'src/app/services/upload.service';
 import { LoginService } from "src/app/services/login.service";
 import { TransactionService } from 'src/app/services/transaction.service';
+import {TableModule} from 'primeng/table';
 
 
 
@@ -90,8 +91,8 @@ import { TransactionService } from 'src/app/services/transaction.service';
     MatIconModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatTableModule
-   
+    MatTableModule,
+   TableModule
 
     
   ],
