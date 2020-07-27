@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -8,20 +8,9 @@ import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
   providers: [NgbDropdownConfig]
 })
 export class NavbarComponent implements OnInit {
-  public sidebarOpened = false;
-  toggleOffcanvas() {
-    this.sidebarOpened = !this.sidebarOpened;
-    if (this.sidebarOpened) {
-      document.querySelector('.sidebar-offcanvas').classList.add('active');
-    }
-    else {
-      document.querySelector('.sidebar-offcanvas').classList.remove('active');
-    }
-  }
-  constructor(config: NgbDropdownConfig) {
-    config.placement = 'bottom-right';
-  }
+
   ngOnInit() {
   }
+
 
 }

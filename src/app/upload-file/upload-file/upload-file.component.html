@@ -1,0 +1,16 @@
+<div class ="container">
+    <div class="row">
+        <div class = "col sb offset-2">
+            <div class = "card-panel green accent-4">
+                <h4 class="center white text ">Upload File</h4>
+            <form #fileForm=ngForm (ngSubmit)="onSubmit(Image)">
+                <input type="file" #Image accept=".xlsx,.xls" (change)="handleFileInput($event.target.files)">
+                <button type="submit" class="btn-large btn-submit btn-primary">Submit</button>
+           <div class="row">
+                <small> *only excel file accepted</small>
+           </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>

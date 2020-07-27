@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import {Transaction} from "src/app/models/transaction";
+import {TransactionService} from "src/app/services/transaction.service";
+
+//let transactions:Transaction[]=[{transactionRef:"123wer",valueDate:"12-09-2020", payerName:"abcd", payerAccount:"DB", payeeName:"qwerty", payeeAccount:"hdfc",amount:123456,status:"vp"}];
 
 @Component({
   selector: 'app-tables',
@@ -7,30 +12,16 @@ import { ViewEncapsulation } from '@angular/core';
   styleUrls: ['./tables.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class TablesComponent implements OnInit {
-  users: User[];
 
-  cols: any[];
-  constructor() { }
+export class TablesComponent implements OnInit {
+  /*transactions:MatTableDataSource<Transaction>;
+  displayedColumns: string[]=["transactionRef","valueDate","payerName","payerAccount","payeeName","payeeAccount","amount","status"];*/
+  constructor(private transactionService:TransactionService) { }
 
   ngOnInit() {
-    this.users = [
-      { id: '1', name: 'kiran',email:'kiran@gmail.com' },
-      { id: '2', name: 'tom',email:'tom@gmail.com' },
-      { id: '3', name: 'john',email:'john@gmail.com' },
-      { id: '4', name: 'Frank',email:'frank@gmail.com' },
-
-  ];
-    this.cols = [
-        { field: 'id', header: 'Id' },
-        { field: 'name', header: 'Name' },
-        { field: 'email', header: 'Email' },
-    ];
+   
+  }
   }
 
-}
-export interface User {
-  id;
-  name;
-  email;
-}
+  
+

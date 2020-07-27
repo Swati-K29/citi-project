@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -26,8 +27,26 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { TooltipsComponent } from './tooltips/tooltips.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
-import {FileUploadModule} from 'primeng/fileupload';
 import { LoginComponent } from './login/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import {
+  MatCardModule,
+  MatTabsModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonModule,
+  MatCheckboxModule,
+  MatIconModule
+} from '@angular/material';
+import {MatTableModule} from '@angular/material/table';
+import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
+
+
+import { UploadService } from 'src/app/services/upload.service';
+import { LoginService } from "src/app/services/login.service";
+import { TransactionService } from 'src/app/services/transaction.service';
+
 
 
 @NgModule({
@@ -52,7 +71,8 @@ import { LoginComponent } from './login/login/login.component';
     TooltipsComponent,
     CarouselComponent,
     TabsComponent,
-    LoginComponent
+    LoginComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule,
@@ -60,11 +80,22 @@ import { LoginComponent } from './login/login/login.component';
     AppRoutingModule,
     FormsModule,
     NgbModule,
-    FileUploadModule
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatTableModule
+   
 
     
   ],
-  providers: [],
+  providers: [UploadService,LoginService, TransactionService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

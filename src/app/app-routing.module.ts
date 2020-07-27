@@ -17,10 +17,14 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { TooltipsComponent } from './tooltips/tooltips.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { LoginComponent } from './login/login/login.component';
+import { UploadFileComponent } from './upload-file/upload-file/upload-file.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  {path:'login', component: LoginComponent},
+  { path: 'dashboard', component: DashboardComponent},
   { path: 'forms', component: FormsComponent },
   { path: 'buttons', component: ButtonsComponent },
   { path: 'tables', component: TablesComponent },
@@ -35,7 +39,8 @@ const routes: Routes = [
   { path: 'dropdowns', component: DropdownComponent },
   { path: 'tooltips', component: TooltipsComponent },
   { path: 'carousel', component: CarouselComponent },
-  { path: 'tabs', component: TabsComponent }
+  { path: 'tabs', component: TabsComponent },
+  {path: 'upload-file', component: UploadFileComponent}
 ];
 
 @NgModule({
